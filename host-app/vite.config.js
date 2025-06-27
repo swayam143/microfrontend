@@ -17,6 +17,11 @@ export default defineConfig({
           name: "remote_app",
           entry: "http://localhost:5001/remoteEntry.js",
         },
+        shared_lib: {
+          type: "module",
+          name: "shared_lib",
+          entry: "http://localhost:6001/shared_lib.js",
+        },
       },
       shared: {
         react: {
