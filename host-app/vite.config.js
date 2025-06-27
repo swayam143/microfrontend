@@ -10,7 +10,6 @@ export default defineConfig({
       filename: "hostApp.js",
       exposes: {
         "./useCounter": "./src/useCounter.js",
-        "./useName": "./src/hooks/useName",
       },
       remotes: {
         remote_app: {

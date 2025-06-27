@@ -12,7 +12,7 @@ export default defineConfig({
         "./App": "./src/App.jsx",
       },
       remotes: {
-        remote_app: {
+        host_app: {
           type: "module",
           name: "host_app",
           entry: "http://localhost:5000/hostApp.js",

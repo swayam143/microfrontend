@@ -70,6 +70,14 @@
         
     }
       const usedRemotes = [
+                {
+                  entryGlobalName: "host_app",
+                  name: "host_app",
+                  type: "module",
+                  entry: "http://localhost:5000/hostApp.js",
+                  shareScope: "default",
+                }
+          
       ]
       export {
         usedShared,
