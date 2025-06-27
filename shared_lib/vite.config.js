@@ -6,21 +6,16 @@ import { federation } from "@module-federation/vite";
 export default defineConfig({
   plugins: [
     federation({
-      name: "remote_app",
-      filename: "remoteEntry.js",
+      name: "shared_lib",
+      filename: "shared_lib.js",
       exposes: {
-        "./App": "./src/App.jsx",
+        "./constants": "./src/constants.js",
       },
       remotes: {
         host_app: {
           type: "module",
           name: "host_app",
           entry: "http://localhost:5000/hostApp.js",
-        },
-        shared_lib: {
-          type: "module",
-          name: "shared_lib",
-          entry: "http://localhost:6001/shared_lib.js",
         },
       },
       shared: {
@@ -35,8 +30,8 @@ export default defineConfig({
     react(),
   ],
   server: {
-    port: 5001,
-    origin: "http://localhost:5001",
+    port: 6001,
+    origin: "http://localhost:6001",
   },
   build: {
     target: "chrome89",

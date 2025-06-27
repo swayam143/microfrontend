@@ -10,6 +10,7 @@ import {
   Stack,
 } from "@mui/material";
 import CustomHook from "./CustomHook";
+import SharedCOmmonConfigs from "./SharedCOmmonConfigs";
 
 const App = ({ title, setCount, count }) => {
   const user = useSelector((state) => state.user);
@@ -42,7 +43,7 @@ const App = ({ title, setCount, count }) => {
           alignItems="center"
           height="100vh"
           bgcolor="#f0f2f5"
-          width="90vw"
+          width="98vw"
         >
           <Paper
             elevation={3}
@@ -82,6 +83,7 @@ const App = ({ title, setCount, count }) => {
               </Button>
             </Stack>{" "}
             <CustomHook />
+            <SharedCOmmonConfigs />
           </Paper>
         </Box>
       </Suspense>
