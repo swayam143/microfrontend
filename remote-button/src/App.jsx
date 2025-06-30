@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import CustomHook from "./CustomHook";
 import SharedCOmmonConfigs from "./SharedCOmmonConfigs";
+import MultiFucntionExport from "./MultiFucntionExport.jsx";
 
 const App = ({ title, setCount, count }) => {
   const user = useSelector((state) => state.user);
@@ -90,6 +91,7 @@ const App = ({ title, setCount, count }) => {
             </Stack>{" "}
             <CustomHook />
             <SharedCOmmonConfigs />
+            <MultiFucntionExport />
           </Paper>
         </Box>
       </Suspense>
