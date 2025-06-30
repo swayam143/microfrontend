@@ -34,6 +34,12 @@ const App = ({ title, setCount, count }) => {
     });
   };
 
+  useEffect(() => {
+    import("host_app/SharedStyle").then(() => {
+      // console.log("Shared styles applied from host.");
+    });
+  }, []);
+
   return (
     <>
       <Suspense fallback={<CircularProgress />}>
@@ -49,8 +55,8 @@ const App = ({ title, setCount, count }) => {
             elevation={3}
             sx={{ padding: 4, width: 400, textAlign: "center" }}
           >
-            <Typography variant="h5" gutterBottom>
-              {title}
+            <Typography variant="h5" gutterBottom className="color_red">
+              {title} (Red color css comes from host app)
             </Typography>
             <Typography variant="body1" gutterBottom>
               <strong>Redux State:</strong> {user?.user || "N/A"}

@@ -71,6 +71,14 @@
     }
       const usedRemotes = [
                 {
+                  entryGlobalName: "shared_lib",
+                  name: "shared_lib",
+                  type: "module",
+                  entry: "http://localhost:6001/shared_lib.js",
+                  shareScope: "default",
+                }
+          ,
+                {
                   entryGlobalName: "host_app",
                   name: "host_app",
                   type: "module",
