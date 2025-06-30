@@ -11,6 +11,7 @@ export default defineConfig({
       exposes: {
         "./useCounter": "./src/useCounter.js",
         "./SharedStyle": "./src/shared-style.js", // NOT shared.css
+        "./mathUtils": "./src/mathUtils.js",
       },
       remotes: {
         remote_app: {
