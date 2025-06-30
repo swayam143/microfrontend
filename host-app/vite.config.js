@@ -10,6 +10,7 @@ export default defineConfig({
       filename: "hostApp.js",
       exposes: {
         "./useCounter": "./src/useCounter.js",
+        "./SharedStyle": "./src/shared-style.js", // NOT shared.css
       },
       remotes: {
         remote_app: {
